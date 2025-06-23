@@ -12,7 +12,7 @@ TARGET := $(BIN_DIR)/gw
 all: $(TARGET)
 
 $(TARGET): $(OBJ) | $(BIN_DIR)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -static -o $@ $^
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
